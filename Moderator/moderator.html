@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html>
+<meta charset = "utf-8"> <!-- Para aceitar acentuos -->
+<title>Insper Moderator</title><!-- Título que vai aparecer na aba -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+<style>
+html,body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
+</style>
+<body class="w3-light-grey"><!-- Cor do Background -->
+
+<!-- Top container -->
+<div class="w3-container w3-top w3-red w3-large w3-padding" style="z-index:4"><!-- Barra vermelha no topo da página -->
+  <button class="w3-btn w3-hide-large w3-padding-0 w3-hover-text-grey" onclick="w3_open();"><i class="fa fa-bars"></i>  Menu</button>
+  <span class="w3-right">INSPER CLICKER</span><!-- No topo direito da Página -->
+</div>
+
+<!-- Sidenav/menu -->
+<nav class="w3-sidenav w3-collapse w3-white w3-animate-left" style="z-index:3;width:300px;" id="mySidenav"><br> <!-- Barra esquerda -->
+  <div class="w3-container w3-row">
+    <div class="w3-col s4">
+      <img src="insper.png" class="w3-Square w3-margin-right" style="width:50px"><!-- Foto em cima da barra esquerda -->
+    </div>
+    <div class="w3-col s9"><!-- Ao trocar o valor de "s" o Welcome, Moderator! muda de posição -->
+      <span>Welcome, <strong>Moderator!</strong></span><br>
+      <a href="#" class="w3-hover-none w3-hover-text-red w3-show-inline-block"><i class="fa fa-envelope"></i></a>
+      <a href="#" class="w3-hover-none w3-hover-text-green w3-show-inline-block"><i class="fa fa-user"></i></a>
+      <a href="#" class="w3-hover-none w3-hover-text-blue w3-show-inline-block"><i class="fa fa-cog"></i></a>
+    <!-- Items embaixodo Welcome,Moderator!-->
+    </div>
+  </div>
+  <hr>
+  <div class="w3-container">
+    <h5>Moderator Operations</h5>
+  </div>
+  <a href="#" class="w3-padding-16 w3-hide-large w3-dark-blue w3-hover-black" onclick="w3_close()" title="close menu"><i class="fa fa-remove fa-fw"></i>  Close Menu</a>
+  <form action="file:///Users/Felipe/Desktop/INSPER/4SEMESTRE/Tecnologias%20Web/Projeto%201/moderator2.html#">
+  <a href="file:///Users/Felipe/Desktop/INSPER/4SEMESTRE/Tecnologias%20Web/Projeto%201/moderator2.html#" class="w3-padding"><i class="fa fa-question-circle-o fa-fw"></i> Create Questions</a>
+  </form>
+  <a href="#" class="w3-padding"><i class="fa fa-users fa-fw"></i>  Users</a>
+  <a href="#" class="w3-padding"><i class="fa fa-eye fa-fw"></i>  Views</a>
+  <a href="#" class="w3-padding"><i class="fa fa-bullseye fa-fw"></i>  Answers</a>
+  <a href="#" class="w3-padding"><i class="fa fa-line-chart fa-fw"></i>  Statistics</a>
+  <a href="#" class="w3-padding"><i class="fa fa-history fa-fw"></i>  History</a>
+  <a href="#" class="w3-padding"><i class="fa fa-cog fa-fw"></i>  Settings</a><br><br>
+  <!-- Items embaixodo Moderator Operations-->
+</nav>
+
+
+<!-- Overlay effect when opening sidenav on small screens -->
+<div class="w3-overlay w3-hide-large w3-animate-opacity" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+<!-- !PAGE CONTENT! -->
+<div class="w3-main" style="margin-left:300px;margin-top:43px;">
+
+  <!-- Header -->
+  <header class="w3-container" style="padding-top:22px">
+    <h5><b><i class="fa fa-dashboard"></i> Moderator's Dashboard</b></h5>
+  </header>
+
+  <div class="w3-row-padding w3-margin-bottom">
+    <div class="w3-quarter">
+      <div class="w3-container w3-red w3-padding-16">
+        <div class="w3-left"><i class="fa fa-comment w3-xxxlarge"></i></div>
+        <div class="w3-right">
+          <h3>52</h3>
+          <!-- CAixa de Answers Vermelha-->
+        </div>
+        <div class="w3-clear"></div>
+        <h4>Answers</h4>
+      </div>
+    </div>
+    <div class="w3-quarter">
+      <div class="w3-container w3-blue w3-padding-16">
+        <div class="w3-left"><i class="fa fa-eye w3-xxxlarge"></i></div>
+        <div class="w3-right">
+          <h3>99</h3>
+          <!-- CAixa de Views Azul-->
+        </div>
+        <div class="w3-clear"></div>
+        <h4>Views</h4>
+      </div>
+    </div>
+    <div class="w3-quarter">
+      <div class="w3-container w3-teal w3-padding-16">
+        <div class="w3-left"><i class="fa fa-bar-chart-o w3-xxxlarge"></i></div>
+        <div class="w3-right">
+          <h3>23</h3>
+          <!-- CAixa de Statistics Verde-->
+        </div>
+        <div class="w3-clear"></div>
+        <h4>Statistics</h4>
+      </div>
+    </div>
+    <div class="w3-quarter">
+      <div class="w3-container w3-orange w3-text-white w3-padding-16">
+        <div class="w3-left"><i class="fa fa-users w3-xxxlarge"></i></div>
+        <div class="w3-right">
+          <h3>50</h3>
+          <!-- CAixa de Users Amarela-->
+        </div>
+        <div class="w3-clear"></div>
+        <h4>Users</h4>
+      </div>
+    </div>
+  </div>
+  <div class="w3-container">
+    <h5>General Statistics</h5>
+    <p>New Visitors</p>
+    <div class="w3-progress-container w3-grey">
+      <div id="myBar" class="w3-progressbar w3-green" style="width:25%">
+        <div class="w3-center w3-text-white">+25%</div>
+      </div>
+    </div>
+
+    <p>New Users</p>
+    <div class="w3-progress-container w3-grey">
+      <div id="myBar" class="w3-progressbar w3-orange" style="width:50%">
+        <div class="w3-center w3-text-white">50%</div>
+      </div>
+    </div>
+
+    <p>Answers</p>
+    <div class="w3-progress-container w3-grey">
+      <div id="myBar" class="w3-progressbar w3-red" style="width:75%">
+        <div class="w3-center w3-text-white">75%</div>
+      </div>
+    </div>
+  </div>
+  <div class="w3-container">
+    <h5>Recent Users</h5>
+    <ul class="w3-ul w3-card-4 w3-white">
+      <li class="w3-padding-16">
+        <span onclick="this.parentElement.style.display='none'" class="w3-closebtn w3-padding w3-margin-right w3-large">x</span>
+        <img src="perfil1.jpg" class="w3-left w3-circle w3-margin-right" style="width:35px">
+        <span class="w3-xlarge">Felipe Buniac</span><br>
+      </li>
+      <li class="w3-padding-16">
+        <span onclick="this.parentElement.style.display='none'" class="w3-closebtn w3-padding w3-margin-right w3-medium">x</span>
+        <img src="perfil2.jpg" class="w3-left w3-circle w3-margin-right" style="width:35px">
+        <span class="w3-xlarge">Lucas Astur</span><br>
+      </li>
+      <li class="w3-padding-16">
+        <span onclick="this.parentElement.style.display='none'" class="w3-closebtn w3-padding w3-margin-right w3-medium">x</span>
+        <img src="perfil3.jpg" class="w3-left w3-circle w3-margin-right" style="width:35px">
+        <span class="w3-xlarge">João Pedro Pieroni</span><br>
+      </li>
+    </ul>
+  </div>
+  <hr>
+
+  <div class="w3-container w3-dark-grey w3-padding-32">
+    <div class="w3-row">
+      <div class="w3-container w3-third">
+        <h5 class="w3-bottombar w3-border-green">Designed by</h5>
+        <p>Felipe Frid Buniac</p>
+        <p>Lucas Astur</p>
+        <p>João Pedro Pieroni</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="w3-container w3-padding-16 w3-light-grey">
+    <h4></h4>
+    <p>Powered by <a href="http://www.insper.edu.br/vestibular/engenharia-de-computacao/" target="_blank">Insper Computer Engineering</a></p>
+  </footer>
+
+  <!-- End page content -->
+</div>
+
+<script>
+// Get the Sidenav
+var mySidenav = document.getElementById("mySidenav");
+
+// Get the DIV with overlay effect
+var overlayBg = document.getElementById("myOverlay");
+
+// Toggle between showing and hiding the sidenav, and add overlay effect
+function w3_open() {
+    if (mySidenav.style.display === 'block') {
+        mySidenav.style.display = 'none';
+        overlayBg.style.display = "none";
+    } else {
+        mySidenav.style.display = 'block';
+        overlayBg.style.display = "block";
+    }
+}
+
+// Close the sidenav with the close button
+function w3_close() {
+    mySidenav.style.display = "none";
+    overlayBg.style.display = "none";
+}
+</script>
+
+</body>
+</html>
+
