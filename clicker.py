@@ -20,34 +20,31 @@ class Pergunta(db.Model):
 
 @app.route("/")
 def root():
-    return """<!DOCTYPE html>
-				<html>
-
-				<head>
-					<h1>Bem vindo ao Insper Clicker</h1>
-				</head>
-
-				<body>
-					<a href="""+ url_for('moderador')+""">Moderador</a>
-					<a href="http://www.w3schools.com/html/">Usuario</a>
-				</body>
-
-				</html>"""
+    return render_template('index.html')
 @app.route("/moderador",methods=['GET','POST'])
 def moderador():
 	if request.method == 'GET':
 		return render_template('moderator2.html')
 	elif request.method =='POST':
-		pergunta1 = request.form['pergunta']
-		resposta1 = request.form['resposta']
-		clicker = Pergunta(pergunta=pergunta1 ,resposta=resposta1)
+		pergunta = request.form['pergunta']
+		resposta = request.form['resposta']
+		clicker = Pergunta(pergunta=pergunta ,resposta=resposta)
 		db.session.add(clicker)
+		db.session.commit()
 
 		return render_template('moderadorcriado.html')
 	else:
 		return "<h2> Requisição Inválida</h2>"
 
+@app.route("/usuario",methods=['GET','POST'])
+def usuario():
+	perguntaview = Pergunta.query.filter_by(pergunta=pergunta).first()
 
+	if request.method == 'GET':
+		return render_template('usuario.html',perguntaview = perguntaview)
+	if request.method == 'POST':
+		respostaesc = request.form['group1']
+		return render_template('usuariosubm.html')
     
 db.create_all()
 
