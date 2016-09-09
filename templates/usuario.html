@@ -22,12 +22,13 @@
 	  </header>
 
     <div class ="espacamento">
+    {% for i in perguntaview %}
     <form method ="post">
       <div>
-        <span><h5><span>{{perguntaview}}</span></h5></span>
+        <span><h5><span>{{i.pergunta}}</span></h5></span>
         <p>
           <input name="group1" type="radio" id="test1" name="opcao1" />
-          <label for="test1">Red</label>
+          <label for="test1">{{i.resposta}}</label>
         </p>
         <br>
         <p>
@@ -39,53 +40,15 @@
           <input class="group1" name="group1" type="radio" id="test3" name="opcao3"  />
           <label for="test3">Green</label>
         </p>
-        <p><input type=submit value="confirmar 1">
+        
         <br>
       </div>
     </form>
-    <form method = "post">
-      <div>
-        <span><h5><span>PERGUNTA 2 DO CURSO DE TECHWEB</span></h5></span>
-        <p>
-          <input name="group1" type="radio" id="test4" />
-          <label for="test4">Red</label>
-        </p>
-        <br>
-        <p>
-          <input name="group1" type="radio" id="test5" />
-          <label for="test5">Yellow</label>
-        </p>
-        <br>
-        <p>
-          <input class="group1" name="group1" type="radio" id="test6"  />
-          <label for="test6">Green</label>
-        </p>
-        <p><input type=submit value="confirmar 2">
-        <br>
-      </div>
+    {% endfor %}
+    <form method ="post">
+      <input type=submit value="Enviar respostas">
     </form>
-    <form method = "post" >
-      <div>
-        <span><h5><span>PERGUNTA 3 DO CURSO DE TECHWEB</span></h5></span>
-        <p>
-          <input name="group1" type="radio" id="test7" />
-          <label for="test7">Red</label>
-        </p>
-        <br>
-        <p>
-          <input name="group1" type="radio" id="test8" />
-          <label for="test8">Yellow</label>
-        </p>
-        <br>
-        <p>
-          <input class="group1" name="group1" type="radio" id="test9"  />
-          <label for="test9">Green</label>
-        </p>
-        <p><input type=submit value="confirmar 3">
-        <br>
-      </div>
-    </form>
-    </div>
+    
 
     <footer class="page-footer red">
       <div class="footer-copyright">

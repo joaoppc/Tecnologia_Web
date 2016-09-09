@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <meta charset="UTF-8">
+      <script>
+      function lerNome() {
+         var xhttp = new XMLHttpRequest();
+         xhttp.onreadystatechange = function() {
+          if (xhttp.readyState == 4 && xhttp.status == 200) {
+           document.getElementById("servidor").innerHTML = xhttp.responseText;
+          }
+         };
+         xhttp.open("GET", "/servidor", true);
+         xhttp.send();  
+       }
+      </script>
+    </head>
+    <body>
+      Nome do servidor: <spam id="servidor"></spam></br>
+      <button onclick="lerNome()">quantos anos você tem?</button>
+   </body>
+</html>
