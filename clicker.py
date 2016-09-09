@@ -1,8 +1,9 @@
 # -*- coding: utf-8 -*-
-
+import os
 from flask import Flask
 from flask import url_for, redirect, request, render_template
 from flask_sqlalchemy import SQLAlchemy
+
 
 
 app = Flask(__name__)
@@ -21,6 +22,7 @@ class Pergunta(db.Model):
 @app.route("/")
 def root():
     return render_template('index.html')
+
 @app.route("/moderador",methods=['GET','POST'])
 def moderador():
 	if request.method == 'GET':
@@ -38,7 +40,8 @@ def moderador():
 
 @app.route("/usuario",methods=['GET','POST'])
 def usuario():
-	perguntaview = Pergunta.query.filter_by(pergunta=pergunta).first()
+	perguntaview = Pergunta.query.all()
+	
 
 	if request.method == 'GET':
 		return render_template('usuario.html',perguntaview = perguntaview)
@@ -48,5 +51,6 @@ def usuario():
     
 db.create_all()
 
+port = os.getenv('PORT', '5000')
 if __name__ == "__main__":
-    app.run()
+	app.run(host='0.0.0.0', port=int(port))

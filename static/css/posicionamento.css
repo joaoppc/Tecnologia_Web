@@ -1,0 +1,26 @@
+#vermelho{
+	background-color: red;
+	font-size: 120%;
+	padding-bottom:250%;
+	padding-right:5%;
+}
+#verde{
+	background-color: green;
+	font-size: 120%;
+	padding-bottom:250%;
+
+}
+#amarelo{
+	background-color: yellow;
+	font-size: 120%;
+	padding-bottom:250%;
+
+}
+#azul{
+
+	background-color: @azul;
+	font-size: 120%;
+	padding-bottom:250%;
+
+	
+}
