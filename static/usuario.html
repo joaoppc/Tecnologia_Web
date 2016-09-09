@@ -3,12 +3,10 @@
    		<title>Clicker!</title>
    		<meta charset="utf-8">
    		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
-		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
-		<link href="{{ url_for('static',filename='css/materialize.css') }}" type="text/css" rel="stylesheet" media="screen,projection"/>
-		<link href="{{ url_for('static',filename='css/style.css') }}" type="text/css" rel="stylesheet" media="screen,projection"/>
-    <link href="{{ url_for('static',filename='css/usuario.css') }}" type="text/css" rel="stylesheet" media="screen,projection"/>
-    <link href="{{ url_for('static',filename='css/materialize.css') }}" type="text/css" rel="stylesheet" media="screen,projection"/>
-  <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+		<link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+		<link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+    <link href="css/usuario.css" type="text/css" rel="stylesheet" media="screen,projection"/>
    </HEAD>
    
 
@@ -16,15 +14,15 @@
    	<header>
       <nav class="red darken-4" role="navigation">
         <div class="nav-wrapper container">
-          <a href="http://127.0.0.1:5000/" class="brand-logo">Insper Clicker</a>
+          <a href="index.html" class="brand-logo">Insper Clicker</a>
         </div>
       </nav>
 	  </header>
 
     <div class ="espacamento">
-    <form method ="post">
+    <form action="#">
       <div>
-        <span><h5><span>{{perguntaview}}</span></h5></span>
+        <span><h5><span>PERGUNTA 1 DO CURSO DE TECHWEB</span></h5></span>
         <p>
           <input name="group1" type="radio" id="test1" name="opcao1" />
           <label for="test1">Red</label>
@@ -43,7 +41,7 @@
         <br>
       </div>
     </form>
-    <form method = "post">
+    <form action="#">
       <div>
         <span><h5><span>PERGUNTA 2 DO CURSO DE TECHWEB</span></h5></span>
         <p>
@@ -64,7 +62,7 @@
         <br>
       </div>
     </form>
-    <form method = "post" >
+    <form action="#">
       <div>
         <span><h5><span>PERGUNTA 3 DO CURSO DE TECHWEB</span></h5></span>
         <p>
