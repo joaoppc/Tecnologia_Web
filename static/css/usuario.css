@@ -1,8 +1,9 @@
 .espacamento {
-	padding-bottom: 2%;
-	padding-left:40%;
+	padding-left: 30%;
+	padding-right: 30%;
 	border-bottom: 1px solid black;
 	font-size: 140%;
+	align-items: center;
 
 }
 
