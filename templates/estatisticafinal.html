@@ -1,0 +1,55 @@
+<HTML>
+   <HEAD>
+      <title>Clicker!</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+    <link href="{{ url_for('static',filename='css/materialize.css') }}" type="text/css" rel="stylesheet" media="screen,projection"/>
+    <link href="{{ url_for('static',filename='css/style.css') }}" type="text/css" rel="stylesheet" media="screen,projection"/>
+    <link href="{{ url_for('static',filename='css/usuario.css') }}" type="text/css" rel="stylesheet" media="screen,projection"/>
+    <link href="{{ url_for('static',filename='css/materialize.css') }}" type="text/css" rel="stylesheet" media="screen,projection"/>
+    <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+   </HEAD>
+   
+
+   <BODY>
+    <header>
+      <nav class="red darken-4" role="navigation">
+        <div class="nav-wrapper container">
+          <a href="http://127.0.0.1:5000/" class="brand-logo">Insper Clicker</a>
+        </div>
+      </nav>
+    </header>
+
+    <div class="espacamento">
+          {% for i in perguntaview %}
+
+          <span><h5><span><strong>pergunta:  </strong>{{i.pergunta}}</span></h5></span>
+          <br>
+          <span><h5><span>{{i.resposta1}} : {{number1}}</span></h5></span>
+          <br>
+          <span><h5><span>{{i.resposta2}} : {{number2}}</span></h5></span>
+          <br>
+          <span><h5><span>{{i.resposta3}} : {{number3}}</span></h5></span>
+          <br>
+          <span><h5><span>{{i.resposta4}} : {{number4}}</span></h5></span>
+          <br>
+          <span><h5><span>{{i.resposta5}} : {{number5}}</span></h5></span>
+          {% endfor %}
+    </div>
+
+
+    <footer class="page-footer red">
+      <div class="footer-copyright">
+        <div class="container">
+          Feito por Astur, João e Buniac
+        </div>
+      </div>
+    </footer>
+   </BODY>
+</HTML>
+
+
+
+
+

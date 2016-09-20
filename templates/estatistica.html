@@ -2,7 +2,7 @@
 
 <html>
 <meta charset = "utf-8"> <!-- Para aceitar acentuos -->
-<title>Create Questions</title><!-- Título que vai aparecer na aba -->
+<title>Insper Clicker-Moderador</title><!-- Título que vai aparecer na aba -->
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
@@ -25,10 +25,7 @@ html,body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
       <img src="insper.png" class="w3-Square w3-margin-right" style="width:50px"><!-- Foto em cima da barra esquerda -->
     </div>
     <div class="w3-col s9"><!-- Ao trocar o valor de "s" o Welcome, Moderator! muda de posição -->
-      <span>Welcome, <strong>Moderator!</strong></span><br>
-      <a href="#" class="w3-hover-none w3-hover-text-red w3-show-inline-block"><i class="fa fa-envelope"></i></a>
-      <a href="#" class="w3-hover-none w3-hover-text-green w3-show-inline-block"><i class="fa fa-user"></i></a>
-      <a href="#" class="w3-hover-none w3-hover-text-blue w3-show-inline-block"><i class="fa fa-cog"></i></a>
+      <span>Bemo-vindo, <strong>Professor!</strong></span><br>
     <!-- Items embaixodo Welcome,Moderator!-->
     </div>
   </div>
@@ -36,13 +33,10 @@ html,body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
   <div class="w3-container">
     <h5>Moderator Operations</h5>
   </div>
-  <a href="#" class="w3-hover-blue"><i class="fa fa-question-circle-o fa-fw"></i> Create Questions</a>
+  <a href= "http://127.0.0.1:5000/moderador" class="w3-hover-blue"><i class="fa fa-question-circle-o fa-fw"></i> Create Questions</a>
   <a href="#" class="w3-padding"><i class="fa fa-users fa-fw"></i>  Users</a>
-  <a href="#" class="w3-padding"><i class="fa fa-eye fa-fw"></i>  Views</a>
-  <a href="#" class="w3-padding"><i class="fa fa-bullseye fa-fw"></i>  Answers</a>
-  <a href="#" class="w3-padding"><i class="fa fa-line-chart fa-fw"></i>  Statistics</a>
-  <a href="#" class="w3-padding"><i class="fa fa-history fa-fw"></i>  History</a>
-  <a href="#" class="w3-padding"><i class="fa fa-cog fa-fw"></i>  Settings</a><br><br>
+  <a href="http://127.0.0.1:5000/usuario" class="w3-padding"><i class="fa fa-bullseye fa-fw"></i>  Answers</a>
+  <a href="http://127.0.0.1:5000/estatistica" class="w3-padding"><i class="fa fa-line-chart fa-fw"></i>  Statistics</a>
   <!-- Items embaixodo Moderator Operations-->
 </nav>
 
@@ -55,46 +49,26 @@ html,body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
 
   <!-- Header -->
   <header class="w3-container" style="padding-top:22px">
-    <h5><b><i class="fa fa-question-circle-o"></i> CREATE QUESTIONS</b></h5>
+    <h5><b><i class="fa fa-question-circle-o"></i> CRIAR PERGUNTAS</b></h5>
   </header>
   <body>
 
-<form action="action_page.php">
- <p> Question 1:<br><p>
-  <input type="text" name="firstname" value="">
-  <br>
+  {% for i in perguntaview %}
 
-<select>
-  <option value="1">1</option>
-  <option value="2">2</option>
-  <option value="3">3</option>
-  <option value="4">4</option>
-</select>
+  <span><h5><span><strong>pergunta:  </strong>{{i.pergunta}}</span></h5></span>
+  <br>
+  <span><h5><span>{{i.resposta1}}  {{number1}}</span></h5></span>
+  <br>
+  <span><h5><span>{{i.resposta2}}  {{number2}}</span></h5></span>
+  <br>
+  <span><h5><span>{{i.resposta3}}  {{number3}}</span></h5></span>
+  <br>
+  <span><h5><span>{{i.resposta4}}  {{number4}}</span></h5></span>
+  <br>
+  <span><h5><span>{{i.resposta5}}  {{number5}}</span></h5></span>
+  {% endfor %}
+
   
-
-  <p>Question 2:<br><p>
-  <input type="text" name="lastname" value="">
-  <br>
-
-
-<select>
-  <option value="1">1</option>
-  <option value="2">2</option>
-  <option value="3">3</option>
-  <option value="4">4</option>
-</select>
-
-
- <p> <form action="file:///Users/Felipe/Desktop/INSPER/4SEMESTRE/Tecnologias%20Web/Projeto%201/moderator.html#">
- <input type="submit" value="Submit" />
-
-    <!--input type="Submit" value="Submit" /-->
-
-</form>
- 
-
-
-<p>"Submit your form!"</p>
 
 </body>
   <div class="w3-container w3-dark-grey w3-padding-32">

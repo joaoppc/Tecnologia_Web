@@ -1,0 +1,83 @@
+<HTML>
+   <HEAD>
+   		<title>Clicker!</title>
+   		<meta charset="utf-8">
+   		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+		<link href="{{ url_for('static',filename='css/materialize.css') }}" type="text/css" rel="stylesheet" media="screen,projection"/>
+		<link href="{{ url_for('static',filename='css/style.css') }}" type="text/css" rel="stylesheet" media="screen,projection"/>
+    <link href="{{ url_for('static',filename='css/usuario.css') }}" type="text/css" rel="stylesheet" media="screen,projection"/>
+    <link href="{{ url_for('static',filename='css/materialize.css') }}" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <script type="text/javascript">
+
+    
+    var respesc = document.getElementsByName('group1');
+  
+    if (respesc.checked) {
+        // do whatever you want with the checked radio
+        alert(respesc.value);
+    }
+
+
+  </script>
+
+   </HEAD>
+   
+
+   <BODY>
+   	<header>
+      <nav class="red darken-4" role="navigation">
+        <div class="nav-wrapper container">
+          <a href="http://127.0.0.1:5000/" class="brand-logo">Insper Clicker</a>
+        </div>
+      </nav>
+	  </header>
+
+    <div class ="espacamento">
+    
+
+    <form method ="post">
+    {% for i in perguntaview %}
+      <div>
+        <span><h5><span>{{i.pergunta}}</span></h5></span>
+        <p>
+          <input name="group1{{i.pergunta}}" type="radio" id="test1{{i.pergunta}}" name="opcao1" value = "{{i.resposta1}}" />
+          <label for="test1{{i.pergunta}}">{{i.resposta1}}</label>
+        </p>
+        <br>
+        <p>
+          <input name="group1{{i.pergunta}}" type="radio" id="test2{{i.pergunta}}" name="opcao2" value = "{{i.resposta2}}"  />
+          <label for="test2{{i.pergunta}}">{{i.resposta2}}</label>
+        </p>
+        <br>
+        <p>
+          <input name="group1{{i.pergunta}}" type="radio" id="test3{{i.pergunta}}" name="opcao3" value = "{{i.resposta3}}" />
+          <label for="test3{{i.pergunta}}">{{i.resposta3}}</label>
+        </p>
+        <br>
+        <p>
+          <input name="group1{{i.pergunta}}" type="radio" id="test4{{i.pergunta}}" name="opcao4" value = "{{i.resposta4}}" />
+          <label for="test4{{i.pergunta}}">{{i.resposta4}}</label>
+        </p>
+        <br>
+        <p>
+          <input name="group1{{i.pergunta}}"  type="radio" id="test5{{i.pergunta}}" name="opcao5" value = "{{i.resposta5}}"  />
+          <label for="test5{{i.pergunta}}">{{i.resposta5}}</label>
+        </p>
+        <br>
+      </div>
+    {% endfor %}
+      <input type=submit value="Enviar respostas">
+    </form>
+    
+
+    <footer class="page-footer red">
+      <div class="footer-copyright">
+        <div class="container">
+          Feito por Astur, João e Buniac - Design-base providenciado por <a class="red-text text-lighten-3" href="http://materializecss.com">Materialize</a>
+        </div>
+      </div>
+    </footer>
+   </BODY>
+</HTML>

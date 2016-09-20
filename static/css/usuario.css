@@ -1,0 +1,17 @@
+.espacamento {
+	padding-left: 30%;
+	padding-right: 30%;
+	border-bottom: 1px solid black;
+	font-size: 140%;
+
+}
+
+.card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+body {
+    background-image: url("clean-white-polygon-backgrounds-8.jpg");
+}
