@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <HTML>
    <HEAD>
    		<title>Clicker!</title>
@@ -80,4 +81,66 @@
       </div>
     </footer>
    </BODY>
+=======
+<HTML>
+   <HEAD>
+   		<title>Clicker!</title>
+   		<meta charset="utf-8">
+   		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+		<link href="{{ url_for('static',filename='css/materialize.css') }}" type="text/css" rel="stylesheet" media="screen,projection"/>
+		<link href="{{ url_for('static',filename='css/style.css') }}" type="text/css" rel="stylesheet" media="screen,projection"/>
+    <link href="{{ url_for('static',filename='css/usuario.css') }}" type="text/css" rel="stylesheet" media="screen,projection"/>
+    <link href="{{ url_for('static',filename='css/materialize.css') }}" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+   </HEAD>
+   
+
+   <BODY>
+   	<header>
+      <nav class="red darken-4" role="navigation">
+        <div class="nav-wrapper container">
+          <a href="http://127.0.0.1:5000/" class="brand-logo">Insper Clicker</a>
+        </div>
+      </nav>
+	  </header>
+
+    <div class ="espacamento">
+    {% for i in perguntaview %}
+    <form method ="post">
+      <div>
+        <span><h5><span>{{i.pergunta}}</span></h5></span>
+        <p>
+          <input name="group1" type="radio" id="test1" name="opcao1" />
+          <label for="test1">{{i.resposta}}</label>
+        </p>
+        <br>
+        <p>
+          <input name="group1" type="radio" id="test2" name="opcao2" />
+          <label for="test2">Yellow</label>
+        </p>
+        <br>
+        <p>
+          <input class="group1" name="group1" type="radio" id="test3" name="opcao3"  />
+          <label for="test3">Green</label>
+        </p>
+        
+        <br>
+      </div>
+    </form>
+    {% endfor %}
+    <form method ="post">
+      <input type=submit value="Enviar respostas">
+    </form>
+    
+
+    <footer class="page-footer red">
+      <div class="footer-copyright">
+        <div class="container">
+          Feito por Astur, João e Buniac - Design-base providenciado por <a class="red-text text-lighten-3" href="http://materializecss.com">Materialize</a>
+        </div>
+      </div>
+    </footer>
+   </BODY>
+>>>>>>> 00d53cbb218da94f066e4f6a27ff50e6a9c3b346
 </HTML>

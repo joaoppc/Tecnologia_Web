@@ -13,6 +13,7 @@ db = SQLAlchemy(app)
 class Pergunta(db.Model):
 	id = db.Column(db.Integer, primary_key=True)
 	pergunta = db.Column(db.String(80), unique=True)
+<<<<<<< HEAD
 	resposta1 = db.Column(db.String(120), unique=True)
 	resposta2 = db.Column(db.String(160), unique=True)
 	resposta3 = db.Column(db.String(200), unique=True)
@@ -41,6 +42,14 @@ class Estatistica(db.Model):
 	def __init__(self, respesc):
     	   self.respesc = respesc
     	   
+=======
+	resposta = db.Column(db.String(120), unique=True)
+ 
+	def __init__(self, pergunta, resposta):
+    	   self.pergunta = pergunta
+    	   self.resposta = resposta
+
+>>>>>>> 00d53cbb218da94f066e4f6a27ff50e6a9c3b346
 @app.route("/")
 def root():
     return render_template('index.html')
@@ -48,6 +57,7 @@ def root():
 @app.route("/moderador",methods=['GET','POST'])
 def moderador():
 	if request.method == 'GET':
+<<<<<<< HEAD
 		return render_template('moderatorfinal.html')
 	elif request.method =='POST':
 		pergunta = request.form['pergunta']
@@ -62,21 +72,37 @@ def moderador():
 		db.session.commit()
 
 		return render_template('moderadorcriadofinal.html')
+=======
+		return render_template('moderator2.html')
+	elif request.method =='POST':
+		pergunta = request.form['pergunta']
+		resposta = request.form['resposta']
+		clicker = Pergunta(pergunta=pergunta ,resposta=resposta)
+		db.session.add(clicker)
+		db.session.commit()
+
+		return render_template('moderadorcriado.html')
+>>>>>>> 00d53cbb218da94f066e4f6a27ff50e6a9c3b346
 	else:
 		return "<h2> Requisição Inválida</h2>"
 
 @app.route("/usuario",methods=['GET','POST'])
 def usuario():
+<<<<<<< HEAD
 	count = 0
 	perguntaview = Pergunta.query.all()
 	total = len(perguntaview)
 	
 
+=======
+	perguntaview = Pergunta.query.all()
+>>>>>>> 00d53cbb218da94f066e4f6a27ff50e6a9c3b346
 	
 
 	if request.method == 'GET':
 		return render_template('usuario.html',perguntaview = perguntaview)
 	if request.method == 'POST':
+<<<<<<< HEAD
 		for j in range(len(perguntaview)):
 			respesc = request.form['group1%s'% perguntaview[j].pergunta]
 
@@ -123,6 +149,10 @@ def estatistica():
 
 	return render_template('estatisticafinal.html',perguntaview=perguntaview,number1=number1,number2=number2,number3=number3,number4=number4,number5=number5,total=total)
 
+=======
+		respostaesc = request.form['group1']
+		return render_template('usuariosubm.html')
+>>>>>>> 00d53cbb218da94f066e4f6a27ff50e6a9c3b346
     
 db.create_all()
 

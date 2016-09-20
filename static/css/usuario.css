@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 .espacamento {
 	padding-left: 30%;
 	padding-right: 30%;
@@ -14,4 +15,23 @@
 
 body {
     background-image: url("clean-white-polygon-backgrounds-8.jpg");
+=======
+.espacamento {
+	padding-left: 30%;
+	padding-right: 30%;
+	border-bottom: 1px solid black;
+	font-size: 140%;
+	align-items: center;
+
+}
+
+.card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+body {
+    background-image: url("clean-white-polygon-backgrounds-8.jpg");
+>>>>>>> 00d53cbb218da94f066e4f6a27ff50e6a9c3b346
 }
